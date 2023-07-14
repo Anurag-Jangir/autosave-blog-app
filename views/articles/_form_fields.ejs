@@ -1,0 +1,38 @@
+<div class="form-group">
+  <label for="title">Title</label>
+  <input required value="<%= article.title %>" type="text" name="title" id="title" class="form-control">
+</div>
+<div class="form-group">
+  <label for="description">Description</label>
+  <textarea name="description" id="description" class="form-control"><%= article.description %></textarea>
+</div>
+<div class="form-group">
+  <label for="markdown">Markdown</label>
+  <textarea required name="markdown" id="markdown" class="form-control"
+    oninput="autosave()"><%= article.markdown %></textarea>
+</div>
+<div>
+  <p id="contentSaved"></p>
+</div>
+
+<script>
+  // Autosave function
+  const saveAlert = `<p style="color: rgb(6, 203, 6); text-align: center;"> Autosaved Successfully </p>`
+  const autosave = () => {
+    document.getElementById('contentSaved').innerHTML = saveAlert;
+    const updatedContent = document.getElementById('markdown').value;
+    localStorage.setItem('autosaveContent', updatedContent);
+  };
+
+  // Restore autosaved content
+  window.addEventListener('DOMContentLoaded', () => {
+    const autosavedContent = localStorage.getItem('autosaveContent');
+    if (autosavedContent) {
+      document.getElementById('markdown').value = autosavedContent;
+    }
+  });
+</script>
+
+
+<a href="/" class="btn btn-secondary">Cancel</a>
+<button type="submit" class="btn btn-primary">Save</button>
