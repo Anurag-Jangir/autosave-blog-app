@@ -56,3 +56,10 @@ Benefits of using slugify for URL generation:
   
 ### Contributing
 Contributions are welcome! If you have any suggestions, improvements, or bug fixes, please open an issue or submit a pull request.
+
+
+
+https://github.com/Anurag-Jangir/autosave-blog-app/assets/89689615/1b6a130a-2429-4f74-98ea-47c1c260f97d
+
+
+
