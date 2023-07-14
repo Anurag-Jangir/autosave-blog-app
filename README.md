@@ -43,7 +43,7 @@ Benefits of using slugify for URL generation:
 
 1. Start the application:
 
-   ```npm run start```
+   ```npm run devStart```
 
 2. Open your web browser and navigate to ```http://localhost:5000``` to access the application.
 
