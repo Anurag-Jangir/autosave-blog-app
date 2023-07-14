@@ -16,12 +16,15 @@ The application includes an autosave feature that automatically saves the conten
 
 The autosave feature utilizes the `localStorage` API to store the article content locally within the user's browser. When the user revisits the page, the previously autosaved content is retrieved and displayed in the article form.
 
-### Additional Features
+### Slugify for URL Generation
 
-- Create new articles with a title, description, and Markdown content.
-- Edit existing articles and update their content.
-- View the details of an article, including its title, description, and rendered Markdown content.
-- Delete articles from the application.
+The application uses the `slugify` library to generate URL-friendly slugs for article titles. Slugify is a library that converts a given string into a URL slug, removing any special characters, converting spaces to hyphens, and making the text lowercase.
+
+Benefits of using slugify for URL generation:
+- Creates clean and readable URLs
+- Improves SEO by including relevant keywords in the URL
+- Prevents issues with special characters or spaces in the URL
+- Enhances user experience by providing user-friendly and memorable URLs
 
 ## Getting Started
 
